@@ -19,44 +19,55 @@
     </div>
   </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-   <div class="field">
-    <%= f.label :short_name %>
-    <%= f.text_field :short_name %>
-  </div>
- <div class="field">
-    <%= f.label :start_date %>
-    <%= f.datetime_select :start_date %>
-  </div>
-  <div class="field">
-    <%= f.label :end_date %>
-    <%= f.datetime_select :end_date %>
-  </div>
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :prices %>
-    <div class="input-prepend">
-      <span class="add-on">$</span>
-      <%= text_field_tag :price, nil, class: "span1" %>
-      <a id="add_event_price_button" class="small super button" href="#">Add Price</a>
+  
+  <div class="admin-event-section-wrapper">
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+     <div class="field">
+      <%= f.label :short_name %>
+      <%= f.text_field :short_name %>
+    </div>
+  </div>  
+  <div class="admin-event-section-wrapper">
+    <div class="field">
+      <%= f.label :start_date %>
+      <%= f.datetime_select :start_date %>
+    </div>
+    <div class="field">
+      <%= f.label :end_date %>
+      <%= f.datetime_select :end_date %>
     </div>
   </div>
-  <div class="field">
-    <%= f.label :short_description %>
-    <%= f.text_field :short_description, class: "span5" %>
+  <div class="admin-event-section-wrapper">
+    <div class="field">
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+  <div class="admin-event-section-wrapper">
+    <div class="field">
+      <%= f.label :prices %>
+      <div class="input-prepend">
+        <span class="add-on">$</span>
+        <%= text_field_tag :price, nil, class: "span1" %>
+        <a id="add_event_price_button" class="small super button" href="#">Add Price</a>
+      </div>
+    </div>
   </div>
-  <div class="actions">
+  <div class="admin-event-section-wrapper">
+    <div class="field">
+      <%= f.label :short_description %>
+      <%= f.text_field :short_description, class: "span5" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+  </div>
+    <div class="actions">
     <%= link_to "Cancel", events_path, class: "medium red super button" %>
     <%= f.submit nil, class: "medium super button" %>
   </div>
