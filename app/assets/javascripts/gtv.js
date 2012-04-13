@@ -8,4 +8,5 @@
 //= require date
 //= require templates/three_week_view
 //= require templates/15_event_view
+//= require templates/mentoring
 //= require gtv_runner

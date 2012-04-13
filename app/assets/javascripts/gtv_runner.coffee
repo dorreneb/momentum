@@ -61,6 +61,10 @@ class SSEEventPanelsView extends Backbone.View
   initialize: ->
     $("body").html(JST["templates/15_event_view"]( events: @options.events ))
 
+class SSEMentoringView extends Backbone.View
+  initialize: ->
+    $("body").html(JST["templates/mentoring"]({}))
+
 class SSEBlankView extends Backbone.View
   initialize: ->
     # alert("Blanking out screen.")
@@ -74,6 +78,9 @@ class SSEController extends Backbone.Router
       "nextPage": "event_panels"
     "event_panels":
       "timeAlive": 30
+      "nextPage": "mentoring"
+    "mentoring":
+      "timeAlive": 20
       "nextPage": "three_week"
     "month":
       "timeAlive": 0
@@ -109,6 +116,7 @@ class SSEController extends Backbone.Router
       when "two_week" then @two_week()
       when "three_week" then @three_week()
       when "event_panels" then @event_panels()
+      when "mentoring" then @mentoring()
       else @pause()
 
   month: =>
@@ -158,6 +166,9 @@ class SSEController extends Backbone.Router
           events: allEvents
       else
         console.log("No events to load.");
+
+  mentoring: =>
+    new SSEMentoringView
 
   pause: ->
     new SSEBlankView

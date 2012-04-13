@@ -1,0 +1,6 @@
+
+<% console.log("Hello from mentoring view") %>
+<iframe src="https://www.google.com/calendar/embed?src=ict76b9u2j4ogt6r3spab08vog%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="1920" height="1080" frameborder="0" scrolling="no">
+
+</iframe>
+
